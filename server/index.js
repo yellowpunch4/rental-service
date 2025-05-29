@@ -6,6 +6,7 @@ import sequelize from './config/database.js';
 import router from './routes/index.js';
 import errorMiddleware from './middleware/ErrorHandlingMiddleware.js';
 import { fileURLToPath } from 'url';
+import reviewRoutes from './routes/reviewRoutes.js'
 
 // import './models/offer.js'
 // import './models/review.js'
@@ -26,7 +27,6 @@ app.use(express.json());
 app.use('/', router);
 app.use(errorMiddleware);
 app.use('/static', express.static(path.resolve(__dirname,'static')));
-
 app.get('/', (req,res) => {
     res.status(200).json({message: 'Ура! Все заработало'})
 });
