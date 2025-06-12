@@ -1,11 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './components/app/app';
-<link rel="stylesheet" href="css/main.css"></link>
+import { Setting } from './const';
+import { offers } from './mocks/offers';
+const root = document.getElementById('root');
 
-const root = createRoot(document.getElementById('root')!);
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+if (root) {
+  createRoot(root).render(
+    <StrictMode>
+      <App rentalOffersCount={Setting.rentalOffersCount}
+        offers={offers}/>
+    </StrictMode>
+  );
+}
