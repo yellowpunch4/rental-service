@@ -8,7 +8,7 @@ const router = new Router();
 router.get('/offers', getAllOffers);
 router.get('/offers/:id', getFullOffer);
 router.get('/favorite', getFavoriteOffers);
-router.post('/favorite/:offerId/:status', toggleFavorite, authenticateToken);
+router.post('/favorite/:offerId/:status',authenticateToken,toggleFavorite);
 router.post(
   '/offers',
   upload.fields([

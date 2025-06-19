@@ -66,7 +66,7 @@ export const login = async (req, res, next) => {
 
    res.json({ token });
  } catch (error) {
-   next(ApiError.internal('Ошибка авторизации'));
+   next(ApiError.internal(error));
  }
 };
 export const checkAuth = (req, res) => {

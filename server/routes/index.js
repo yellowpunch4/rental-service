@@ -9,6 +9,5 @@ const router = new Router();
 router.use('/', offerRouter);
 router.use('/', userRotes);
 router.use('/comments', reviewRouter)
-router.post('/favorite/:offerId/:status', toggleFavorite);
 
 export default router
