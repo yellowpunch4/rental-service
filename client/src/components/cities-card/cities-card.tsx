@@ -11,7 +11,7 @@ type CitiesCardProps = {
   previewImage: string;
   rating: number;
 };
-function CitiesCard({id, type, price, previewImage, rating}: CitiesCardProps) {
+function CitiesCard({id, title, type, price, previewImage, isPremium, rating}: CitiesCardProps) {
   const [,setOfferId] = useState('');
   return (
     <article className="cities__card place-card" onMouseOver={()=> setOfferId(id)} onMouseOut={()=>setOfferId('')}>
